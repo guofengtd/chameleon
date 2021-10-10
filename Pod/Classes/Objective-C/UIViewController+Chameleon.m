@@ -124,15 +124,13 @@
     
     [self chameleon_preferredStatusBarStyle];
     
-    if (self.shouldContrast) {
-
-        CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
-        UIView *topView = [self.view findTopMostViewForPoint:CGPointMake(CGRectGetMidX(statusBarFrame), 2)];
-        
-        return [self contrastingStatusBarStyleForColor:topView.backgroundColor];
-        
-    } else {
-        
+    if (TRUE && self.shouldContrast) {
+//        CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+//        UIView *topView = [self.view findTopMostViewForPoint:CGPointMake(CGRectGetMidX(statusBarFrame), 2)];
+//
+//        return [self contrastingStatusBarStyleForColor:topView.backgroundColor];
+    }
+    else {
         if (self.shouldUseLightContent) {
             return UIStatusBarStyleLightContent;
             
@@ -148,18 +146,18 @@
     if (contentStyle == UIContentStyleContrast) {
         
         if ([ContrastColor(primaryColor, YES) isEqual:FlatWhite]) {
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        } else {
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        }
+        else {
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
         }
         
-    } else if (contentStyle == UIContentStyleLight) {
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        
-    } else {
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    }
+    else if (contentStyle == UIContentStyleLight) {
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
+    else {
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
     
     [[self class] customizeBarButtonItemWithPrimaryColor:primaryColor contentStyle:contentStyle];
@@ -182,20 +180,18 @@
                   andContentStyle:(UIContentStyle)contentStyle {
     
     if (contentStyle == UIContentStyleContrast) {
-        
         if ([ContrastColor(primaryColor, YES) isEqual:FlatWhite]) {
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        } else {
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         }
-        
-    } else if (contentStyle == UIContentStyleLight) {
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        
-    } else {
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        else {
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        }
+    }
+    else if (contentStyle == UIContentStyleLight) {
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
+    else {
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
     
     [[self class] customizeBarButtonItemWithPrimaryColor:primaryColor contentStyle:contentStyle];
@@ -219,20 +215,18 @@
                   andContentStyle:(UIContentStyle)contentStyle {
     
     if (contentStyle == UIContentStyleContrast) {
-        
         if ([ContrastColor(primaryColor, YES) isEqual:FlatWhite]) {
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        } else {
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         }
-        
-    } else if (contentStyle == UIContentStyleLight) {
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        
-    } else {
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        else {
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        }
+    }
+    else if (contentStyle == UIContentStyleLight) {
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
+    else {
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
     
     [[UILabel appearance] setSubstituteFontName:fontName];
